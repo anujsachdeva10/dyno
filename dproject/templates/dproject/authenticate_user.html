@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            .wrapper{
+                width: 30%;
+                margin-top: 12%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+        </style>
+
+        <title>Authentication Form</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="wrapper">
+            <p style="text-align: center; font-size: 32px; font-weight: bold; margin-bottom: 8%;">LOGIN!</p>
+            <form style="text-align: center;" method = "POST">
+                {% csrf_token %}
+                <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Username</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username">
+                <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+                </div>
+                <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+                </div>
+                <input type="submit" class="btn btn-primary"></input>
+            </form>
+        </div>
+    </body>
+</html>

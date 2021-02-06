@@ -27,6 +27,4 @@ urlpatterns = [
     path('', views.authenticate_user, name='authenticate'),
     path('insertdata/', views.insert_credentials, name='insert_credentials'),
     path('logout/', views.user_logout, name="logout"),
-    # url(r'^media/(?P<path>.*)$', serve, ('document_root': settings.MEDIA_ROOT)),
-    # url(r'^static/(?P<path>.*)$', serve, ('document_root': settings.STATIC_ROOT)),
 ]

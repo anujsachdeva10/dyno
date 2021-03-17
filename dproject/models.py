@@ -7,6 +7,9 @@ class user(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.user.username
+
 
 class information(models.Model):
 
@@ -14,7 +17,7 @@ class information(models.Model):
     name = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.name
+        return  "designation: {}, name: {}".format(self.designation, self.name)
 
 
 class link(models.Model):
@@ -22,6 +25,7 @@ class link(models.Model):
     SNo = models.IntegerField(default=0)
     link = models.URLField()
 
-
+    def __str__(self):
+        return "SNo: {}, link: {}".format(self.SNo, self.link)
 
 
